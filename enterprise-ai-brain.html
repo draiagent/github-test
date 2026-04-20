@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企業 AI 腦工作坊</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Noto Sans TC', sans-serif; background: #0d1117; color: #e0e0e0; }
+    .slide {
+      min-height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 60px 40px; text-align: center;
+    }
+    .slide:nth-child(odd) { background: #0d1117; }
+    .slide:nth-child(even) { background: #161b22; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); color: #58a6ff; margin: 0 0 20px; }
+    h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); color: #79c0ff; margin: 0 0 16px; }
+    p, li { font-size: clamp(1rem, 2.5vw, 1.4rem); line-height: 1.8; max-width: 800px; }
+    ul { text-align: left; padding-left: 1.5em; }
+    .tag {
+      display: inline-block; background: #1f6feb; color: #fff;
+      border-radius: 20px; padding: 4px 16px; font-size: .9rem; margin-bottom: 16px;
+    }
+    .highlight { color: #ffa657; font-weight: bold; }
+    .timer { font-size: clamp(1.2rem, 3vw, 2rem); color: #3fb950; margin-top: 12px; }
+    hr { border: none; border-top: 1px solid #30363d; width: 100%; max-width: 700px; margin: 40px 0; }
+  </style>
+</head>
+<body>
+  <script src="nav.js"></script>
+
+  <!-- Slide 1: 封面 -->
+  <div class="slide">
+    <div class="tag">90 分鐘工作坊</div>
+    <h1>企業 AI 腦</h1>
+    <p>用生成式 AI 打造你的第二大腦<br>讓知識管理與決策效率倍增</p>
+    <div class="timer">⏱ 共 90 分鐘・6 大單元</div>
+  </div>
+
+  <!-- Slide 2: 課程目標 -->
+  <div class="slide">
+    <h2>今天你將學到</h2>
+    <ul>
+      <li>🧠 什麼是「AI 腦」思維框架</li>
+      <li>⚡ 用 AI 快速整理與萃取知識</li>
+      <li>🔄 打造可重複使用的 Prompt 工作流</li>
+      <li>📊 AI 輔助決策與報告撰寫</li>
+      <li>🛠️ 實作：建立你的第一個 AI 腦模板</li>
+    </ul>
+  </div>
+
+  <!-- Slide 3: 單元一 -->
+  <div class="slide">
+    <div class="tag">Unit 1・15 min</div>
+    <h2>AI 腦是什麼？</h2>
+    <p>傳統大腦負責<span class="highlight">創意與判斷</span>，<br>AI 腦負責<span class="highlight">記憶、整理與草稿</span>。</p>
+    <p>兩者協作 = 超級生產力</p>
+  </div>
+
+  <!-- Slide 4: 單元二 -->
+  <div class="slide">
+    <div class="tag">Unit 2・20 min</div>
+    <h2>知識輸入與萃取</h2>
+    <ul>
+      <li>會議記錄 → AI 摘要 + 行動清單</li>
+      <li>文件 / 報告 → 關鍵洞察提取</li>
+      <li>網頁 / PDF → 結構化筆記</li>
+    </ul>
+    <p class="timer">💡 實作：上傳一份文件，試跑萃取 Prompt</p>
+  </div>
+
+  <!-- Slide 5: 單元三 -->
+  <div class="slide">
+    <div class="tag">Unit 3・20 min</div>
+    <h2>Prompt 工作流設計</h2>
+    <p>好的 Prompt = <span class="highlight">角色 + 任務 + 格式 + 限制</span></p>
+    <ul>
+      <li>建立可複用的 Prompt 模板庫</li>
+      <li>情境切換：報告 / 簡報 / 郵件</li>
+      <li>迭代優化技巧</li>
+    </ul>
+  </div>
+
+  <!-- Slide 6: 實作 -->
+  <div class="slide">
+    <div class="tag">Unit 4–6・35 min</div>
+    <h2>動手做：打造你的 AI 腦</h2>
+    <ul>
+      <li>選擇你的工具（ChatGPT / Claude / Gemini）</li>
+      <li>建立個人知識庫模板</li>
+      <li>跑一次完整的「輸入→整理→輸出」流程</li>
+      <li>分組分享成果（5 min）</li>
+    </ul>
+    <div class="timer">⏱ 剩餘 35 分鐘，開始！</div>
+  </div>
+
+</body>
+</html>
