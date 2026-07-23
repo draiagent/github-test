@@ -1,5 +1,6 @@
 const tools = [
   { title: '企業 AI 腦工作坊', url: '/enterprise-ai-brain.html' },
+  { title: '形成性測驗', url: '/formative-quiz.html' },
 ];
 
 (function () {
