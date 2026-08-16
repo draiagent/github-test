@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/easycure-design-system-69513289-2733-47d5-9dd9-d6dd433a04ab/tokens/colors.css">
+<link rel="stylesheet" href="_ds/easycure-design-system-69513289-2733-47d5-9dd9-d6dd433a04ab/tokens/typography.css">
+<link rel="stylesheet" href="_ds/easycure-design-system-69513289-2733-47d5-9dd9-d6dd433a04ab/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/easycure-design-system-69513289-2733-47d5-9dd9-d6dd433a04ab/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/easycure-design-system-69513289-2733-47d5-9dd9-d6dd433a04ab/styles.css">
+<script src="_ds/easycure-design-system-69513289-2733-47d5-9dd9-d6dd433a04ab/_ds_bundle.js"></script>
+<style>
+  body{margin:0;background:#000;}
+  a{color:var(--text-link);}
+  a:hover{color:var(--text-link-hover);}
+  .icon{display:inline-block;flex-shrink:0;background-color:currentColor;-webkit-mask-position:center;-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;mask-position:center;mask-repeat:no-repeat;mask-size:contain;}
+  :root{
+    --type-display:92px;--type-title:62px;--type-subtitle:38px;--type-body:30px;--type-small:25px;--type-xs:25px;
+    --pad-top:96px;--pad-bottom:80px;--pad-x:120px;--gap-title:44px;--gap-item:26px;
+  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+  @keyframes scaleIn{from{opacity:0;transform:scale(.9);}to{opacity:1;transform:scale(1);}}
+  @keyframes growLine{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+  @media (prefers-reduced-motion: no-preference){
+    [data-deck-active] .a1{animation:fadeUp .6s cubic-bezier(0,0,.2,1) both;}
+    [data-deck-active] .a2{animation:fadeUp .6s .12s cubic-bezier(0,0,.2,1) both;}
+    [data-deck-active] .a3{animation:fadeUp .6s .24s cubic-bezier(0,0,.2,1) both;}
+    [data-deck-active] .a4{animation:fadeUp .6s .36s cubic-bezier(0,0,.2,1) both;}
+    [data-deck-active] .a5{animation:fadeUp .6s .48s cubic-bezier(0,0,.2,1) both;}
+    [data-deck-active] .a6{animation:fadeUp .6s .6s cubic-bezier(0,0,.2,1) both;}
+    [data-deck-active] .a7{animation:fadeUp .6s .72s cubic-bezier(0,0,.2,1) both;}
+    [data-deck-active] .a8{animation:fadeUp .6s .84s cubic-bezier(0,0,.2,1) both;}
+    [data-deck-active] .aScale{animation:scaleIn .7s cubic-bezier(.34,1.56,.64,1) both;}
+    [data-deck-active] .aScale2{animation:scaleIn .7s .15s cubic-bezier(.34,1.56,.64,1) both;}
+    [data-deck-active] .aScale3{animation:scaleIn .7s .3s cubic-bezier(.34,1.56,.64,1) both;}
+    [data-deck-active] .aLine{animation:growLine .9s .5s cubic-bezier(.4,0,.2,1) both;transform-origin:left center;}
+    [data-deck-active] .aCap{animation:fadeUp .6s 1s cubic-bezier(0,0,.2,1) both;}
+  }
+  .caption-bar{margin-top:auto;background:rgba(22,20,16,0.82);border-radius:var(--radius-lg);padding:22px 36px;display:flex;align-items:center;}
+  .caption-bar p{margin:0;color:#fff;font-size:var(--type-xs);line-height:var(--leading-snug);font-weight:var(--weight-medium);}
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="標題" data-speaker-notes="開場：介紹課程主題，說明這堂課會依序涵蓋頻道定位、內容策略、腳本、拍攝、剪輯、縮圖、數據六大面向。" style="display:flex;flex-direction:column;justify-content:center;padding:0 var(--pad-x);background:linear-gradient(135deg, var(--green-600), var(--green-800) 62%, var(--green-900));position:relative;overflow:hidden;color:var(--text-on-primary);font-family:var(--font-sans);">
+  <div style="position:absolute;top:-200px;right:-160px;width:680px;height:680px;border-radius:50%;background:var(--yellow-400);opacity:0.16;"></div>
+  <div style="position:absolute;bottom:-240px;left:-160px;width:560px;height:560px;border-radius:50%;background:var(--yellow-300);opacity:0.10;"></div>
+  <div class="icon aScale" style="position:absolute;top:100px;right:130px;width:96px;height:96px;color:rgba(255,255,255,0.85);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/play-circle.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/play-circle.svg);"></div>
+  <div class="a1" style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.26);padding:10px 26px;border-radius:var(--radius-pill);width:fit-content;font-size:var(--type-small);letter-spacing:var(--tracking-wide);margin-bottom:36px;">課堂教學．共 10 講</div>
+  <h1 class="a2" style="font-size:var(--type-display);font-weight:var(--weight-black);margin:0 0 28px;line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);">YouTube 專業教學</h1>
+  <p class="a3" style="font-size:var(--type-subtitle);font-weight:var(--weight-medium);margin:0;color:rgba(255,255,255,0.88);max-width:1150px;line-height:var(--leading-snug);">從頻道定位到數據分析，建立一套可長期經營的內容製作方法</p>
+  <div class="caption-bar aCap" style="position:absolute;left:var(--pad-x);right:var(--pad-x);bottom:64px;margin-top:0;"><p>這堂課要教大家如何有系統地經營一個專業的 YouTube 頻道。從頻道定位開始，一路談到內容策略、腳本、拍攝、剪輯，最後是縮圖標題和數據分析。這十堂內容會依照這個順序，一步一步帶大家建立方法。</p></div>
+</section>
+
+<section data-label="課程大綱" data-speaker-notes="說明本課程八個模組，讓學生對整體架構有心理準備。" style="display:flex;flex-direction:column;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);background:var(--surface-page);font-family:var(--font-sans);color:var(--text-primary);">
+  <div class="a1" style="display:flex;align-items:center;gap:20px;margin-bottom:var(--gap-title);">
+    <span style="font-size:var(--type-small);font-weight:var(--weight-bold);color:var(--color-primary);background:var(--color-primary-soft);padding:8px 20px;border-radius:var(--radius-pill);">01</span>
+    <h2 style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0;letter-spacing:var(--tracking-tight);">課程大綱</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 56px;flex:1;align-content:center;">
+    <div class="a2" style="display:flex;gap:22px;align-items:flex-start;">
+      <span style="font-size:var(--type-subtitle);font-weight:var(--weight-black);color:var(--green-300);min-width:56px;">02</span>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">頻道定位</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">找到你的受眾與內容座標</div></div>
+    </div>
+    <div class="a3" style="display:flex;gap:22px;align-items:flex-start;">
+      <span style="font-size:var(--type-subtitle);font-weight:var(--weight-black);color:var(--green-300);min-width:56px;">03</span>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">內容策略</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">規劃可持續產出的內容主軸</div></div>
+    </div>
+    <div class="a4" style="display:flex;gap:22px;align-items:flex-start;">
+      <span style="font-size:var(--type-subtitle);font-weight:var(--weight-black);color:var(--green-300);min-width:56px;">04</span>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">腳本與敘事結構</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">用結構抓住觀眾的注意力</div></div>
+    </div>
+    <div class="a5" style="display:flex;gap:22px;align-items:flex-start;">
+      <span style="font-size:var(--type-subtitle);font-weight:var(--weight-black);color:var(--green-300);min-width:56px;">05</span>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">拍攝與畫面品質</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">打造穩定專業的視覺基礎</div></div>
+    </div>
+    <div class="a6" style="display:flex;gap:22px;align-items:flex-start;">
+      <span style="font-size:var(--type-subtitle);font-weight:var(--weight-black);color:var(--green-300);min-width:56px;">06</span>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">剪輯節奏</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">掌握留住觀眾的關鍵秒數</div></div>
+    </div>
+    <div class="a7" style="display:flex;gap:22px;align-items:flex-start;">
+      <span style="font-size:var(--type-subtitle);font-weight:var(--weight-black);color:var(--green-300);min-width:56px;">07</span>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">縮圖與標題設計</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">決定觀眾是否點擊的第一眼</div></div>
+    </div>
+    <div class="a8" style="display:flex;gap:22px;align-items:flex-start;">
+      <span style="font-size:var(--type-subtitle);font-weight:var(--weight-black);color:var(--green-300);min-width:56px;">08</span>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">成長與數據分析</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">看懂頻道健康的關鍵指標</div></div>
+    </div>
+  </div>
+  <div class="caption-bar aCap" style="background:var(--surface-inverse);"><p style="color:#fff;">我們會分成八個主題來談，從定位、策略，一路到腳本、拍攝、剪輯，再到縮圖標題和數據分析。每個主題都會給大家可以直接帶回頻道使用的具體做法。</p></div>
+</section>
+
+<section data-label="頻道定位" data-speaker-notes="帶學生討論三個問題：受眾是誰、主題是什麼、風格如何呈現。" style="display:flex;flex-direction:column;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);background:var(--surface-page);font-family:var(--font-sans);color:var(--text-primary);">
+  <div class="a1" style="display:flex;align-items:center;gap:20px;margin-bottom:var(--gap-title);">
+    <span style="font-size:var(--type-small);font-weight:var(--weight-bold);color:var(--color-primary);background:var(--color-primary-soft);padding:8px 20px;border-radius:var(--radius-pill);">02</span>
+    <h2 style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0;letter-spacing:var(--tracking-tight);">頻道定位</h2>
+  </div>
+  <div style="display:flex;flex:1;align-items:center;gap:32px;">
+    <div class="a2" style="flex:1;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);box-shadow:var(--shadow-card);padding:48px 40px;display:flex;flex-direction:column;gap:20px;">
+      <div class="icon" style="width:56px;height:56px;color:var(--green-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/users.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/users.svg);"></div>
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);">受眾 Who</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);line-height:var(--leading-relaxed);">你想服務的觀眾是誰？他們在找什麼答案？</div>
+    </div>
+    <div class="icon a3" style="width:40px;height:40px;color:var(--border-strong);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/arrow-right.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/arrow-right.svg);"></div>
+    <div class="a3" style="flex:1;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);box-shadow:var(--shadow-card);padding:48px 40px;display:flex;flex-direction:column;gap:20px;">
+      <div class="icon" style="width:56px;height:56px;color:var(--green-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/compass.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/compass.svg);"></div>
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);">主題 What</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);line-height:var(--leading-relaxed);">你能持續產出、且有差異化的內容題材是什麼？</div>
+    </div>
+    <div class="icon a4" style="width:40px;height:40px;color:var(--border-strong);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/arrow-right.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/arrow-right.svg);"></div>
+    <div class="a4" style="flex:1;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);box-shadow:var(--shadow-card);padding:48px 40px;display:flex;flex-direction:column;gap:20px;">
+      <div class="icon" style="width:56px;height:56px;color:var(--green-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/palette.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/palette.svg);"></div>
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);">風格 How</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);line-height:var(--leading-relaxed);">觀眾會如何形容你的頻道調性與呈現方式？</div>
+    </div>
+  </div>
+  <div class="caption-bar aCap" style="background:var(--surface-inverse);"><p style="color:#fff;">頻道定位要回答三個問題：你的受眾是誰、你要持續產出什麼主題、還有你的風格是什麼。這三個答案越清楚，後面內容規劃就會越容易。</p></div>
+</section>
+
+<section data-label="內容策略" data-speaker-notes="介紹四種內容類型，讓學生思考自己頻道適合哪一種組合。" style="display:flex;flex-direction:column;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);background:var(--surface-page);font-family:var(--font-sans);color:var(--text-primary);">
+  <div class="a1" style="display:flex;align-items:center;gap:20px;margin-bottom:var(--gap-title);">
+    <span style="font-size:var(--type-small);font-weight:var(--weight-bold);color:var(--color-primary);background:var(--color-primary-soft);padding:8px 20px;border-radius:var(--radius-pill);">03</span>
+    <h2 style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0;letter-spacing:var(--tracking-tight);">內容策略</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:28px;flex:1;">
+    <div class="a2" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:36px;display:flex;gap:24px;align-items:center;">
+      <div class="icon" style="width:52px;height:52px;color:var(--yellow-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/graduation-cap.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/graduation-cap.svg);"></div>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:6px;">教學型</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">拆解知識與技能，建立信任</div></div>
+    </div>
+    <div class="a3" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:36px;display:flex;gap:24px;align-items:center;">
+      <div class="icon" style="width:52px;height:52px;color:var(--yellow-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/message-square.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/message-square.svg);"></div>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:6px;">觀點型</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">分享觀察與立場，累積討論</div></div>
+    </div>
+    <div class="a4" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:36px;display:flex;gap:24px;align-items:center;">
+      <div class="icon" style="width:52px;height:52px;color:var(--yellow-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/sparkles.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/sparkles.svg);"></div>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:6px;">娛樂型</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">製造情緒與共鳴，擴大觸及</div></div>
+    </div>
+    <div class="a5" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:36px;display:flex;gap:24px;align-items:center;">
+      <div class="icon" style="width:52px;height:52px;color:var(--yellow-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/repeat.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/repeat.svg);"></div>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:6px;">系列型</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">固定節奏更新，養成收看習慣</div></div>
+    </div>
+  </div>
+  <div class="caption-bar aCap" style="background:var(--surface-inverse);"><p style="color:#fff;">內容大致可以分成教學、觀點、娛樂、系列四種類型。你不需要只做一種，但要清楚知道每支影片屬於哪一種，才能維持一致的節奏。</p></div>
+</section>
+
+<section data-label="腳本與敘事結構" data-speaker-notes="說明四段式結構，強調前15秒 Hook 的重要性。" style="display:flex;flex-direction:column;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);background:var(--surface-page);font-family:var(--font-sans);color:var(--text-primary);">
+  <div class="a1" style="display:flex;align-items:center;gap:20px;margin-bottom:76px;">
+    <span style="font-size:var(--type-small);font-weight:var(--weight-bold);color:var(--color-primary);background:var(--color-primary-soft);padding:8px 20px;border-radius:var(--radius-pill);">04</span>
+    <h2 style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0;letter-spacing:var(--tracking-tight);">腳本與敘事結構</h2>
+  </div>
+  <div style="position:relative;flex:1;display:flex;align-items:flex-start;">
+    <div class="aLine" style="position:absolute;top:36px;left:36px;right:36px;height:3px;background:var(--border-default);"></div>
+    <div class="a2" style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;padding:0 20px;">
+      <div style="width:72px;height:72px;border-radius:50%;background:var(--green-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--type-body);font-weight:var(--weight-black);position:relative;z-index:1;">1</div>
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);">Hook（0–15秒）</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);line-height:var(--leading-relaxed);">提出問題或衝突，留住觀眾</div>
+    </div>
+    <div class="a3" style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;padding:0 20px;">
+      <div style="width:72px;height:72px;border-radius:50%;background:var(--green-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--type-body);font-weight:var(--weight-black);position:relative;z-index:1;">2</div>
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);">鋪陳</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);line-height:var(--leading-relaxed);">建立情境，說明為什麼重要</div>
+    </div>
+    <div class="a4" style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;padding:0 20px;">
+      <div style="width:72px;height:72px;border-radius:50%;background:var(--green-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--type-body);font-weight:var(--weight-black);position:relative;z-index:1;">3</div>
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);">核心內容</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);line-height:var(--leading-relaxed);">交付價值，具體且有條理</div>
+    </div>
+    <div class="a5" style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;padding:0 20px;">
+      <div style="width:72px;height:72px;border-radius:50%;background:var(--green-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--type-body);font-weight:var(--weight-black);position:relative;z-index:1;">4</div>
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);">行動呼籲</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);line-height:var(--leading-relaxed);">引導觀眾按讚、訂閱或留言</div>
+    </div>
+  </div>
+  <div class="caption-bar aCap" style="background:var(--surface-inverse);margin-top:56px;"><p style="color:#fff;">一支影片可以拆成四段：開場的 Hook、鋪陳、核心內容，最後是行動呼籲。特別是前 15 秒的 Hook，決定觀眾會不會留下來繼續看。</p></div>
+</section>
+
+<section data-label="拍攝與畫面品質" data-speaker-notes="逐項檢查拍攝基本功，可請學生對照自己目前的設備與環境。" style="display:flex;flex-direction:column;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);background:var(--surface-page);font-family:var(--font-sans);color:var(--text-primary);">
+  <div class="a1" style="display:flex;align-items:center;gap:20px;margin-bottom:var(--gap-title);">
+    <span style="font-size:var(--type-small);font-weight:var(--weight-bold);color:var(--color-primary);background:var(--color-primary-soft);padding:8px 20px;border-radius:var(--radius-pill);">05</span>
+    <h2 style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0;letter-spacing:var(--tracking-tight);">拍攝與畫面品質</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px 56px;flex:1;align-content:center;">
+    <div class="a2" style="display:flex;gap:18px;align-items:flex-start;">
+      <div class="icon" style="width:36px;height:36px;color:var(--green-600);margin-top:4px;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);"><b>穩定的畫面</b>　使用腳架或穩定器，避免手震</div>
+    </div>
+    <div class="a3" style="display:flex;gap:18px;align-items:flex-start;">
+      <div class="icon" style="width:36px;height:36px;color:var(--green-600);margin-top:4px;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);"><b>一致的視覺風格</b>　固定的色調與構圖邏輯</div>
+    </div>
+    <div class="a4" style="display:flex;gap:18px;align-items:flex-start;">
+      <div class="icon" style="width:36px;height:36px;color:var(--green-600);margin-top:4px;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);"><b>充足且方向一致的採光</b>　讓臉部與主體清晰</div>
+    </div>
+    <div class="a5" style="display:flex;gap:18px;align-items:flex-start;">
+      <div class="icon" style="width:36px;height:36px;color:var(--green-600);margin-top:4px;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);"><b>適當的景別變化</b>　交錯遠景、中景與特寫</div>
+    </div>
+    <div class="a6" style="display:flex;gap:18px;align-items:flex-start;">
+      <div class="icon" style="width:36px;height:36px;color:var(--green-600);margin-top:4px;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);"><b>清晰收音</b>　使用外接麥克風，降低環境噪音</div>
+    </div>
+    <div class="a7" style="display:flex;gap:18px;align-items:flex-start;">
+      <div class="icon" style="width:36px;height:36px;color:var(--green-600);margin-top:4px;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);"><b>穩定重複的品牌識別</b>　開場、字卡與配色統一</div>
+    </div>
+  </div>
+  <div class="caption-bar aCap" style="background:var(--surface-inverse);"><p style="color:#fff;">拍攝的基本功包括畫面穩定、採光充足、收音清晰，還有一致的視覺風格。這些細節做好，頻道整體看起來就會更專業。</p></div>
+</section>
+
+<section data-label="剪輯節奏" data-speaker-notes="強調前3秒的重要性，並介紹四種常用剪輯手法。" style="display:flex;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);background:var(--surface-page);font-family:var(--font-sans);color:var(--text-primary);gap:80px;align-items:center;">
+  <div style="flex:0 0 460px;display:flex;flex-direction:column;">
+    <div class="a1" style="display:flex;align-items:center;gap:20px;margin-bottom:56px;">
+      <span style="font-size:var(--type-small);font-weight:var(--weight-bold);color:var(--color-primary);background:var(--color-primary-soft);padding:8px 20px;border-radius:var(--radius-pill);">06</span>
+      <h2 style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0;letter-spacing:var(--tracking-tight);">剪輯節奏</h2>
+    </div>
+    <div class="aScale" style="font-size:220px;font-weight:var(--weight-black);color:var(--yellow-500);line-height:1;letter-spacing:var(--tracking-tight);">3<span style="font-size:80px;">秒</span></div>
+    <div class="a2" style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-top:24px;">觀眾決定是否繼續觀看的黃金時間</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;gap:28px;">
+    <div class="a3" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:32px 36px;">
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">跳接（Jump Cut）</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);">剪掉停頓與贅詞，加快節奏</div>
+    </div>
+    <div class="a4" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:32px 36px;">
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">B-roll 補充畫面</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);">用畫面說話，避免畫面單調</div>
+    </div>
+    <div class="a5" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:32px 36px;">
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">字幕與重點強調</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);">幫助理解，提升完整觀看比例</div>
+    </div>
+    <div class="a6" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:32px 36px;">
+      <div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:8px;">音效與轉場</div>
+      <div style="font-size:var(--type-xs);color:var(--text-secondary);">強化情緒起伏與段落轉換</div>
+    </div>
+    <div class="caption-bar aCap" style="background:var(--surface-inverse);margin-top:0;"><p style="color:#fff;">觀眾大概只給你 3 秒鐘決定要不要繼續看下去。跳接、B-roll、字幕和音效，都是幫助你把節奏抓緊、留住觀眾的剪輯技巧。</p></div>
+  </div>
+</section>
+
+<section data-label="縮圖與標題設計" data-speaker-notes="用對照方式展示有效做法與常見錯誤，可搭配實際頻道案例討論。" style="display:flex;flex-direction:column;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);background:var(--surface-page);font-family:var(--font-sans);color:var(--text-primary);">
+  <div class="a1" style="display:flex;align-items:center;gap:20px;margin-bottom:var(--gap-title);">
+    <span style="font-size:var(--type-small);font-weight:var(--weight-bold);color:var(--color-primary);background:var(--color-primary-soft);padding:8px 20px;border-radius:var(--radius-pill);">07</span>
+    <h2 style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0;letter-spacing:var(--tracking-tight);">縮圖與標題設計</h2>
+  </div>
+  <div style="display:flex;gap:36px;flex:1;">
+    <div class="a2" style="flex:1;background:var(--color-primary-soft);border:1px solid var(--green-200);border-radius:var(--radius-xl);padding:44px;display:flex;flex-direction:column;gap:26px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="icon" style="width:34px;height:34px;color:var(--green-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check.svg);"></div>
+        <div style="font-size:var(--type-body);font-weight:var(--weight-bold);color:var(--green-700);">有效做法</div>
+      </div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);">一個畫面只傳達一個訊息</div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);">使用清楚的表情與對比色</div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);">標題用具體的疑問或利益點</div>
+    </div>
+    <div class="a3" style="flex:1;background:var(--surface-sunken);border:1px solid var(--border-default);border-radius:var(--radius-xl);padding:44px;display:flex;flex-direction:column;gap:26px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="icon" style="width:34px;height:34px;color:var(--text-tertiary);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/x.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/x.svg);"></div>
+        <div style="font-size:var(--type-body);font-weight:var(--weight-bold);color:var(--text-secondary);">常見錯誤</div>
+      </div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);color:var(--text-secondary);">縮圖塞滿文字與元素</div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);color:var(--text-secondary);">標題與內容不符，誤導點擊</div>
+      <div style="font-size:var(--type-xs);line-height:var(--leading-relaxed);color:var(--text-secondary);">顏色與頻道識別不一致</div>
+    </div>
+  </div>
+  <div class="caption-bar aCap" style="background:var(--surface-inverse);"><p style="color:#fff;">縮圖和標題是觀眾決定要不要點進來看的第一眼。畫面盡量單純、對比鮮明，標題也要跟內容一致，避免用誤導的方式騙點擊。</p></div>
+</section>
+
+<section data-label="成長與數據分析" data-speaker-notes="解釋四個核心指標的意義，強調看趨勢而非單次數字。" style="display:flex;flex-direction:column;padding:var(--pad-top) var(--pad-x) var(--pad-bottom);background:var(--surface-page);font-family:var(--font-sans);color:var(--text-primary);">
+  <div class="a1" style="display:flex;align-items:center;gap:20px;margin-bottom:var(--gap-title);">
+    <span style="font-size:var(--type-small);font-weight:var(--weight-bold);color:var(--color-primary);background:var(--color-primary-soft);padding:8px 20px;border-radius:var(--radius-pill);">08</span>
+    <h2 style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0;letter-spacing:var(--tracking-tight);">成長與數據分析</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:28px;flex:1;">
+    <div class="a2" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:36px;display:flex;gap:24px;align-items:center;">
+      <div class="icon" style="width:52px;height:52px;color:var(--green-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/mouse-pointer-click.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/mouse-pointer-click.svg);"></div>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:6px;">點閱率 CTR</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">縮圖與標題吸引點擊的能力</div></div>
+    </div>
+    <div class="a3" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:36px;display:flex;gap:24px;align-items:center;">
+      <div class="icon" style="width:52px;height:52px;color:var(--green-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/clock.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/clock.svg);"></div>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:6px;">平均觀看時長</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">內容節奏是否留得住觀眾</div></div>
+    </div>
+    <div class="a4" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:36px;display:flex;gap:24px;align-items:center;">
+      <div class="icon" style="width:52px;height:52px;color:var(--green-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/user-plus.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/user-plus.svg);"></div>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:6px;">訂閱轉換率</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">觀眾認同頻道長期價值的程度</div></div>
+    </div>
+    <div class="a5" style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:36px;display:flex;gap:24px;align-items:center;">
+      <div class="icon" style="width:52px;height:52px;color:var(--green-600);-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/trending-down.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/trending-down.svg);"></div>
+      <div><div style="font-size:var(--type-body);font-weight:var(--weight-bold);margin-bottom:6px;">觀眾留存曲線</div><div style="font-size:var(--type-xs);color:var(--text-secondary);">找出觀眾在哪一秒開始流失</div></div>
+    </div>
+  </div>
+  <div class="caption-bar aCap" style="background:var(--surface-inverse);"><p style="color:#fff;">點閱率、平均觀看時長、訂閱轉換率和留存曲線，是觀察頻道健康度最基本的四個指標。重點是看趨勢的變化，而不是單一一次的數字。</p></div>
+</section>
+
+<section data-label="總結與行動清單" data-speaker-notes="總結五個可以立刻執行的行動項目，鼓勵學生回去實作。" style="display:flex;flex-direction:column;justify-content:center;padding:0 var(--pad-x);background:linear-gradient(135deg, var(--green-600), var(--green-800) 62%, var(--green-900));position:relative;overflow:hidden;color:var(--text-on-primary);font-family:var(--font-sans);">
+  <div style="position:absolute;top:-180px;left:-160px;width:600px;height:600px;border-radius:50%;background:var(--yellow-400);opacity:0.14;"></div>
+  <div class="a1" style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.26);padding:10px 26px;border-radius:var(--radius-pill);width:fit-content;font-size:var(--type-small);letter-spacing:var(--tracking-wide);margin-bottom:36px;">09</div>
+  <h2 class="a2" style="font-size:var(--type-title);font-weight:var(--weight-black);margin:0 0 48px;letter-spacing:var(--tracking-tight);">總結與行動清單</h2>
+  <div style="display:flex;flex-direction:column;gap:24px;max-width:1200px;">
+    <div class="a3" style="display:flex;align-items:center;gap:20px;">
+      <div class="icon" style="width:36px;height:36px;color:var(--yellow-400);flex-shrink:0;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-body);">先確定頻道定位，再規劃內容</div>
+    </div>
+    <div class="a4" style="display:flex;align-items:center;gap:20px;">
+      <div class="icon" style="width:36px;height:36px;color:var(--yellow-400);flex-shrink:0;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-body);">用腳本結構化你的每一支影片</div>
+    </div>
+    <div class="a5" style="display:flex;align-items:center;gap:20px;">
+      <div class="icon" style="width:36px;height:36px;color:var(--yellow-400);flex-shrink:0;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-body);">投資基本的拍攝與收音品質</div>
+    </div>
+    <div class="a6" style="display:flex;align-items:center;gap:20px;">
+      <div class="icon" style="width:36px;height:36px;color:var(--yellow-400);flex-shrink:0;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-body);">用前 3 秒設計節奏，抓住觀眾</div>
+    </div>
+    <div class="a7" style="display:flex;align-items:center;gap:20px;">
+      <div class="icon" style="width:36px;height:36px;color:var(--yellow-400);flex-shrink:0;-webkit-mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);mask-image:url(https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg);"></div>
+      <div style="font-size:var(--type-body);">定期檢視數據，調整內容方向</div>
+    </div>
+  </div>
+  <div class="caption-bar aCap" style="position:absolute;left:var(--pad-x);right:var(--pad-x);bottom:56px;background:rgba(0,0,0,0.35);"><p style="color:#fff;">今天談的重點，就是先定位、再用腳本結構化內容、投資基本的拍攝與收音品質，並且用前三秒抓住觀眾，最後別忘了定期回頭檢視數據。把這幾件事做好，頻道經營就會有清楚的方向。</p></div>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>
