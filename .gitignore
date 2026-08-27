@@ -1,0 +1,10 @@
+# Claude Code 本機工具設定
+.claude/
+
+# draw skill 產生的圖片暫存
+slides/
+
+# 一般雜項
+.DS_Store
+Thumbs.db
+*.tmp

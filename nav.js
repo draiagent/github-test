@@ -1,6 +1,7 @@
 const tools = [
   { title: '企業 AI 腦工作坊', url: '/enterprise-ai-brain.html' },
   { title: '形成性測驗', url: '/formative-quiz.html' },
+  { title: 'YouTube 專業教學（動畫簡報）', url: '/youtube-slides/index.html' },
   { title: '外語腦英語方法教練', url: 'https://draiagent.github.io/brainswitch-english-method-coach/' },
   { title: 'AI to Agent 長期記憶架構', url: 'https://github.com/draiagent/ai-to-agent-memory' },
 ];
