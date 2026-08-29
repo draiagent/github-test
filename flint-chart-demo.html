@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flint-chart × AI to Agent</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Noto Sans TC', sans-serif; background: #0d1117; color: #e0e0e0; }
+    .slide {
+      min-height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 60px 40px; text-align: center;
+    }
+    .slide:nth-child(odd) { background: #0d1117; }
+    .slide:nth-child(even) { background: #161b22; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); color: #58a6ff; margin: 0 0 20px; }
+    h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); color: #79c0ff; margin: 0 0 16px; }
+    p, li { font-size: clamp(1rem, 2.5vw, 1.4rem); line-height: 1.8; max-width: 860px; }
+    ul { text-align: left; padding-left: 1.5em; }
+    .tag {
+      display: inline-block; background: #1f6feb; color: #fff;
+      border-radius: 20px; padding: 4px 16px; font-size: .9rem; margin-bottom: 16px;
+    }
+    .highlight { color: #ffa657; font-weight: bold; }
+    .muted { color: #8b949e; font-size: clamp(.9rem, 2vw, 1.1rem); }
+    .quote {
+      border-left: 4px solid #3fb950; padding: 12px 24px; text-align: left;
+      background: #0d1117; max-width: 820px; font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+    }
+    hr { border: none; border-top: 1px solid #30363d; width: 100%; max-width: 700px; margin: 40px 0; }
+    table { border-collapse: collapse; max-width: 900px; width: 100%; font-size: clamp(.85rem, 2vw, 1.15rem); }
+    th, td { border: 1px solid #30363d; padding: 10px 14px; text-align: left; }
+    th { background: #1f6feb; color: #fff; }
+    code { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 1px 6px; color: #ffa657; }
+    .cols { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; max-width: 1000px; }
+    .col { background: #0d1117; border: 1px solid #30363d; border-radius: 10px; padding: 20px 24px; width: 300px; }
+    .col h3 { color: #58a6ff; font-size: clamp(1.1rem, 2.5vw, 1.4rem); margin: 0 0 10px; }
+    .col p, .col li { font-size: clamp(.9rem, 2vw, 1.1rem); }
+    .loop {
+      font-family: 'Noto Sans Mono', ui-monospace, Menlo, Consolas, monospace;
+      text-align: left; background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+      padding: 20px 24px; font-size: clamp(.72rem, 1.7vw, 1.05rem); line-height: 1.55;
+      color: #c9d1d9; max-width: 100%; overflow-x: auto; white-space: pre;
+    }
+    .loop .hl { color: #ffa657; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <script src="nav.js"></script>
+
+  <!-- Slide 1: 封面 -->
+  <div class="slide">
+    <div class="tag">教學示範・可投影</div>
+    <h1>flint-chart × AI to Agent</h1>
+    <p>一份語意規格，編出三種前端圖表<br>「意圖」與「實作」解耦的教科書範例</p>
+    <p class="muted">AI Coach 益力康陳董｜2026 AI to Agent</p>
+  </div>
+
+  <!-- Slide 2: 它是什麼 -->
+  <div class="slide">
+    <h2>flint-chart 是什麼？</h2>
+    <p>一個<span class="highlight">語意化圖表編譯器</span>。</p>
+    <p>你只寫一份與後端無關的規格：<br><code>chart_spec</code>（圖種＋欄位對應＋標題）＋ <code>semantic_types</code>（欄位語意型別）</p>
+    <p>它編譯成 <span class="highlight">Vega-Lite / ECharts / Chart.js</span> 三種前端可渲染規格。</p>
+    <p class="muted">顏色、字級、座標軸刻度、後端 JSON —— 你都不寫，由語意推導。</p>
+  </div>
+
+  <!-- Slide 3: 輸入長什麼樣 -->
+  <div class="slide">
+    <div class="tag">輸入範例</div>
+    <h2>你只寫這個</h2>
+    <ul>
+      <li><code>chartType</code>：<code>"Bar Chart"</code></li>
+      <li><code>encodings</code>：<code>x → product_line</code>、<code>y → revenue</code>、<code>column → region</code></li>
+      <li><code>semantic_types</code>：<code>revenue: "Amount"</code>、<code>region: "Region"</code></li>
+    </ul>
+    <p><code>revenue</code> 標成 <code>Amount</code> → 自動貨幣格式、自動零基準、自動排序方向。</p>
+    <p class="muted">語意型別是護欄：告訴它「這是價格 / 排名 / 相關係數」，格式與配色就對了。</p>
+  </div>
+
+  <!-- Slide 4: 三受眾 -->
+  <div class="slide">
+    <h2>誰需要它</h2>
+    <div class="cols">
+      <div class="col">
+        <h3>前端／全端工程師</h3>
+        <p>痛：三大圖表庫 API 心智模型完全不同，換庫＝重寫。</p>
+        <p>解：一份規格 → 三種後端，品牌樣式集中在一個 <code>theme_spec</code>。</p>
+      </div>
+      <div class="col">
+        <h3>資料工程師</h3>
+        <p>痛：繪圖邏輯寫死在 notebook，不能 diff、不能重放。</p>
+        <p>解：圖表規格是純文字 artifact，可版控、可回溯。</p>
+      </div>
+      <div class="col">
+        <h3>AI Agent 開發者</h3>
+        <p>痛：讓 LLM 硬吐後端 JSON，常壞、難驗證、換後端要改 prompt。</p>
+        <p>解：窄生成目標＋<code>validate_chart</code> 內建驗證＋MCP 原生。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5: 共同主線 -->
+  <div class="slide">
+    <div class="tag">核心觀念</div>
+    <h2>同一個問題，三種角色</h2>
+    <div class="quote">
+      flint-chart 用「語意規格 → 編譯 → 多後端」的結構，同時解掉三種角色的同一個問題：<br>
+      讓<span class="highlight">「意圖」與「實作」解耦</span>。<br>
+      這正是 AI to Agent 主張的分層：人（或 Agent）只表達語意，工具層負責可替換的實作。
+    </div>
+  </div>
+
+  <!-- Slide 6: 閉環中的位置 -->
+  <div class="slide">
+    <div class="tag">AI to Agent 閉環</div>
+    <h2>Flint 在整個閉環的位置</h2>
+    <pre class="loop">              KNOW-HOW  （企業 Know-how）
+                 │
+                 ▼
+                VAD   讓需求 / 資料 / 流程被看見
+                 │
+                 ▼
+                VAC   能力規格・工具規則・驗收標準
+                 │
+                 ▼
+            ORCHESTRATOR   依任務分派
+                 │
+      ┌──────────┼──────────┐
+      ▼          ▼          ▼
+   UI Agent  <span class="hl">Data Agent</span>  Process Agent
+      │          │          │
+    Figma   <span class="hl">Flint Chart</span>   Mermaid
+      └──────────┼──────────┘
+                 ▼
+              VERIFY   結果是否符合規格？
+                 │
+                 ▼
+               REUSE   成功能力持續重用
+                 │
+                 ▼
+              KNOW-HOW ──↺  （回寫，循環）</pre>
+    <p class="muted">VAD／VAC 把 Know-how 轉成規格 → Orchestrator 分派 → <span class="highlight">Data Agent 綁 Flint Chart</span> → Verify 驗收 → Reuse 回寫。上層工具（Figma／Flint／Mermaid）可換，閉環不動。</p>
+  </div>
+
+  <!-- Slide 7: 對照表 -->
+  <div class="slide">
+    <h2>意圖層 vs. 被甩掉的實作層</h2>
+    <table>
+      <tr><th>角色</th><th>他要的「意圖層」</th><th>flint 幫他甩掉的「實作層」</th></tr>
+      <tr><td>前端工程師</td><td>「一張帶分面、依值排序的長條圖」</td><td>三種圖表庫的 API 差異</td></tr>
+      <tr><td>資料工程師</td><td>「pipeline 末端要這張圖，且能重放」</td><td>寫死在 notebook 的繪圖碼</td></tr>
+      <tr><td>Agent 開發者</td><td>「把這張表變成對的圖」</td><td>讓 LLM 硬吐易壞的後端 JSON</td></tr>
+    </table>
+  </div>
+
+  <!-- Slide 8: Agent 工具設計原則 -->
+  <div class="slide">
+    <div class="tag">給 Agent 開發者</div>
+    <h2>好的 Agent 工具長什麼樣</h2>
+    <div class="quote">
+      好工具 ＝ <span class="highlight">窄輸入介面</span> ＋ <span class="highlight">語意護欄</span>
+      ＋ <span class="highlight">內建驗證</span> ＋ <span class="highlight">後端可換</span>
+    </div>
+    <ul>
+      <li><b>窄輸入</b>：Agent 只需產 <code>chart_spec</code> + <code>semantic_types</code>，欄位用名稱引用</li>
+      <li><b>語意護欄</b>：型別驅動格式與配色，Agent 不亂調顏色軸刻度</li>
+      <li><b>內建驗證</b>：<code>validate_chart</code> / <code>create_chart_view</code> 先替它檢查</li>
+      <li><b>後端可換</b>：換 Vega-Lite / ECharts / Chart.js 不用重寫 prompt</li>
+    </ul>
+  </div>
+
+  <!-- Slide 9: 現場示範 -->
+  <div class="slide">
+    <div class="tag">現場動手</div>
+    <h2>兩分鐘示範</h2>
+    <ul>
+      <li>掛上 MCP：<code>npx -y flint-chart-mcp</code></li>
+      <li>給一段表格資料，請 Agent 產 <code>ChartAssemblyInput</code></li>
+      <li><code>create_chart_view</code> → 互動圖，當場改主題（nyt / economist / mckinsey…）</li>
+      <li><code>compile_chart</code> → 印出 Vega-Lite JSON，對照「你沒寫的東西」</li>
+    </ul>
+    <p class="muted">重點提問：如果今天不用 flint，Agent 要多寫多少、錯多少？</p>
+  </div>
+
+  <!-- Slide 10: 收尾 -->
+  <div class="slide">
+    <h2>一頁帶走</h2>
+    <ul>
+      <li>flint-chart ＝ 圖表的<span class="highlight">中介表示層</span>：一份語意規格，編三種前端</li>
+      <li>受眾：前端／全端工程師、資料工程師、<span class="highlight">AI Agent 開發者</span></li>
+      <li>對 AI to Agent 的價值：<span class="highlight">意圖與實作解耦</span>的可教學範例</li>
+      <li>在閉環的位置：<span class="highlight">Data Agent → Flint Chart</span>，上層工具可換、閉環不動</li>
+      <li>金句：好工具 = 窄輸入 + 語意護欄 + 內建驗證 + 後端可換</li>
+    </ul>
+  </div>
+
+</body>
+</html>
