@@ -6,6 +6,7 @@ const tools = [
   { title: '外語腦英語方法教練', url: 'https://draiagent.github.io/brainswitch-english-method-coach/' },
   { title: 'AI to Agent 長期記憶架構', url: 'https://github.com/draiagent/ai-to-agent-memory' },
   { title: 'Context-First Human Agent', url: 'https://github.com/draiagent/ai-to-agent-custom-skill' },
+  { title: 'AI to Agent 漫劇製作流程', url: 'https://github.com/draiagent/ai-to-agent-comic-drama-production' },
 ];
 
 (function () {
